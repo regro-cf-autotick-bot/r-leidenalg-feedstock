@@ -10,8 +10,6 @@ source:
     - {{ cran_mirror }}/src/contrib/leidenAlg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/leidenAlg/leidenAlg_{{ version }}.tar.gz
   sha256: 9d2b51ac292abaf18fb0c95a5cac48659839ec2ef863378509ed04a917c06c08
-  patches:
-    - patches/0001-use-AR-variable.patch
 
 build:
   number: 0
@@ -43,7 +41,7 @@ requirements:
     - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
-    - {{ posix }}sed               # [win]
+    - {{ posix }}sed
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
   host:
